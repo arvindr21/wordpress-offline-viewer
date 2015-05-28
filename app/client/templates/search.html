@@ -1,0 +1,32 @@
+<md-dialog aria-label="Search Posts" class="search-dialog">
+    <md-dialog-content class="sticky-container" layout="column">
+        <md-toolbar layout="column"><span flex="flex"></span>
+            <div class="md-toolbar-tools">
+                <div layout="row" flex="flex" class="fill-height">
+                    <div lass="md-toolbar-item md-breadcrumb">
+                        <span>Search Posts</span>
+                    </div>
+                    <span flex="flex"></span>
+                    <div layout="row" class="md-toolbar-item md-tools">
+                        <a ng-click="hide()" href="javascript:" class="md-primary"><i class="ion-close"></i></a>
+                    </div>
+                </div>
+            </div>
+        </md-toolbar>
+        <md-content layout-padding>
+            <md-input-container>
+                <label>I am looking for..</label>
+                <input name="description" ng-model="searchText" ng-keypress="search($event)">
+            </md-input-container>
+            <md-progress-circular ng-show="searching" class="md-accent center-block" md-mode="indeterminate"></md-progress-circular>
+            <md-subheader ng-show="results.length == 0">No results found!!</md-subheader>
+            <md-list ng-show="results.length > 0">
+                <md-list-item ng-click="showPost(post)" ng-repeat="post in results" class="list">
+                    <div ng-bind-html="post.title | toHTML" class="post-title"></div>
+                    <md-divider></md-divider>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-dialog-content>
+    </form>
+</md-dialog>

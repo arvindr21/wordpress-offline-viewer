@@ -1,0 +1,29 @@
+{
+  "name": "wordpress-offline-viewer",
+  "main": "index.js",
+  "version": "0.1.0",
+  "authors": [
+    "Arvind Ravulavaru <arvind.ravulavaru@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "angular": "1.4.0"
+  },
+  "dependencies": {
+    "angular-material": "~0.9.4",
+    "angular-route": "~1.4.0",
+    "roboto-fontface": "~0.4.2",
+    "open-sans-fontface": "~1.4.0",
+    "angular-highlightjs": "~0.4.1",
+    "ng-mfb": "~0.6.0",
+    "ionicons": "~2.0.1",
+    "jquery": "~2.1.4"
+  }
+}

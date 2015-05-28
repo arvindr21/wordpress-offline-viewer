@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Jackal of Javascript | Offline Viewer</title>
+    <link rel="stylesheet" href="app/client/lib/roboto-fontface/css/roboto-fontface.css">
+    <link rel="stylesheet" type="text/css" href="app/client/lib/open-sans-fontface/open-sans.css">
+    <link rel="stylesheet" type="text/css" href="app/client/lib/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="app/client/lib/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="app/client/css/highlight.css">
+    <link rel="stylesheet" type="text/css" href="app/client/lib/ng-mfb/mfb/dist/mfb.css">
+    <link rel="stylesheet" href="app/client/css/index.css">
+    <script type="text/javascript">
+    // start the socket server
+    var app = require('./app/server/server');
+    app(function(port) {
+        window.serverPort = port;
+    });
+    </script>
+</head>
+
+<body layout="column">
+    <div ng-include="'app/client/templates/header.html'"></div>
+    <ng-view layout="row" flex></ng-view>
+    <!-- https://github.com/atom/electron/issues/254 -->
+    <script>
+    window.$ = window.jQuery = require('./app/client/lib/jquery/dist/jquery.min');
+    </script>
+    <script type="text/javascript" src="app/client/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="app/client/lib/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="app/client/lib/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="app/client/lib/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="app/client/lib/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="app/client/lib/highlightjs/highlight.pack.js"></script>
+    <script type="text/javascript" src="app/client/lib/angular-highlightjs/angular-highlightjs.min.js"></script>
+    <script type="text/javascript" src="app/client/lib/ng-mfb/src/mfb-directive.js"></script>
+    <script type="text/javascript" src="app/client/js/services.js"></script>
+    <script type="text/javascript" src="app/client/js/app.js"></script>
+    <script type="text/javascript" src="app/client/js/controllers.js"></script>
+    <script type="text/javascript" src="app/client/js/filters.js"></script>
+    <script type="text/javascript" src="app/client/js/directives.js"></script>
+    <nav mfb-menu ng-controller="SearchCtrl" position="br" effect="zoomin" active-icon="ion-search" resting-icon="ion-search" toggling-method="click" md-ink-ripple ng-click="SearchBox()">
+    </nav>
+</body>
+
+</html>

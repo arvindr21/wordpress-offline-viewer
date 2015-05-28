@@ -1,0 +1,24 @@
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-close="$mdMedia('lt-sm')">
+	<md-list>
+		<md-subheader>All Posts</md-subheader>
+		<md-progress-circular ng-show="posts.length === 0" class="md-accent center-block" md-mode="indeterminate"></md-progress-circular>
+		<md-list-item ng-click="showPost(post)" ng-repeat="post in posts" class="list">
+			<div ng-bind-html="post.title | toHTML" class="post-title"></div>
+			<md-divider></md-divider>
+		</md-list-item>
+	</md-list>
+</md-sidenav>
+<div layout="column" flex id="content">
+	<md-content layout="column" flex class="post">
+		<md-whiteframe ng-show="!post" class="md-whiteframe-z2" layout layout-align="center center">
+			<div layout="column" layout-align="center center">
+				<div class="md-title">Click on the Menu to start reading posts!</div>
+				<div class="mg-top-20p md-title" ng-show="posts.length === 0">
+					Waiting for First Page Posts to Load <span class="md-subhead" ng-show="onLine">(This may take some time)</span>..
+				</div>
+			</div>
+		</md-whiteframe>
+		<!-- <div ng-bind-html="post | post"></div> -->
+		<blog-post post="post" ng-show="post" class="md-padding"></blog-post>
+	</md-content>
+</div>

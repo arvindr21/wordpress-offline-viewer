@@ -1,0 +1,21 @@
+<md-toolbar layout="row" ng-controller="HeaderCtrl" md-scroll-shrink="false">
+    <button ng-click="toggleSidenav('left')" class="md-icon-button menuBtn">
+        <span class="md-visually-hidden">Menu</span>
+    </button>
+    <h1 class="md-toolbar-tools" layout-align-gt-sm="center">The Jackal of Javascript</h1>
+    <div class="md-padding">
+        <md-progress-circular ng-show="inProgress" class="md-accent re-pos-loader" md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div class="md-padding">
+        <div class="online" ng-show="status">
+            <md-tooltip>
+                You are online!
+            </md-tooltip>
+        </div>
+        <div class="offline" ng-show="!status">
+            <md-tooltip>
+                You are offline!
+            </md-tooltip>
+        </div>
+    </div>
+</md-toolbar>

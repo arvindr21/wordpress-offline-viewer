@@ -1,0 +1,146 @@
+body {
+	color: #333;
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+.menuBtn {
+	background-color: transparent;
+	border: none;
+	margin-left: 16px;
+	outline: none;
+}
+
+md-list .md-button {
+	color: inherit;
+	text-align: left;
+	width: 100%;
+}
+
+/* Using Data-URI converted from svg until <md-icon> becomes available
+https://github.com/google/material-design-icons
+*/
+.menuBtn {
+	background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9IkhlYWRlciI+CiAgICA8Zz4KICAgICAgICA8cmVjdCB4PSItNjE4IiB5PSItMjIzMiIgZmlsbD0ibm9uZSIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMzYwMCIvPgogICAgPC9nPgo8L2c+CjxnIGlkPSJMYWJlbCI+CjwvZz4KPGcgaWQ9Ikljb24iPgogICAgPGc+CiAgICAgICAgPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CiAgICAgICAgPHBhdGggZD0iTTMsMThoMTh2LTJIM1YxOHogTTMsMTNoMTh2LTJIM1YxM3ogTTMsNnYyaDE4VjZIM3oiIHN0eWxlPSJmaWxsOiNmM2YzZjM7Ii8+CiAgICA8L2c+CjwvZz4KPGcgaWQ9IkdyaWQiIGRpc3BsYXk9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) no-repeat center center;
+}
+
+.list {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+img {
+	display: block;
+	clear: both;
+	margin: 13.5px auto;
+	box-shadow: 1px 1px 39px 9px rgba(0, 0, 0, 0.5);
+	border: 0;
+	height: auto;
+	max-width: 63%;
+}
+
+.crayon-inline {
+	border-width: 1px !important;
+	border-color: #ccc !important;
+	background: #f5f5f5 !important;
+	border-style: solid !important;
+	padding: 5px;
+	border-radius: 4px;
+	margin: 0 0 10px;
+	color: #000;
+	font-family: monospace;
+}
+
+blog-post {
+	overflow-x: hidden;
+	font-size: 18px;
+}
+
+pre {
+	-webkit-font-smoothing: auto;
+	font-size: 14px;
+	background: #f5f5f5;
+	padding: 10px;
+}
+
+a {
+	color: #f45145;
+	text-decoration: none;
+}
+
+.post-title {
+	color: #f45145;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.mfb-component__button--main,
+.mfb-component__button--child {
+	/*    color: #F44336;
+	background-color: white;*/
+
+	color: white;
+	background-color: #F44336;
+}
+
+.no-pointer {
+	cursor: default;
+}
+
+md-content {
+	overflow-x: hidden;
+}
+
+md-whiteframe {
+	background: #fff;
+	margin: 20px;
+	padding: 20px;
+}
+
+.center-block {
+	margin: 0 auto;
+	display: block;
+}
+
+.mg-top-20p {
+	margin-top: 20px;
+}
+
+.search-dialog {
+	width: 100%;
+	min-height: 333px;
+}
+
+.online {
+	width: 30px;
+	height: 30px;
+	background: green;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+	right: 0;
+	position: absolute;
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+.offline {
+	width: 30px;
+	height: 30px;
+	background: orange;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+	right: 0;
+	position: absolute;
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+.hide {
+	display: none;
+}
+
+.re-pos-loader {
+	position: absolute;
+	margin-right: 72px;
+	right: 0px;
+	top: 7px;
+}
